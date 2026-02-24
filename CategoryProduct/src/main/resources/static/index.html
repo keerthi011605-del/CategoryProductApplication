@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>CategoryProductApplication</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    >
+    </head>
+    <body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+
+            <h3 class="text-center mb-4">CategoryProductApplication</h3>
+
+            <form id="categoryForm" class="row mb-4">
+                <input type="hidden" id="categoryId">
+
+                <div class="col-md-5">
+                    <input
+                            type="text"
+                            id="Name"
+                            class="form-control"
+                            placeholder="Category Name"
+                            required
+                    >
+                </div>
+
+                <div class="col-md-3">
+                    <input
+                            type="text"
+                            id="description"
+                            class="form-control"
+                            placeholder="Description"
+                            required
+                    >
+                </div>
+
+                <div class="col-md-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                        Save
+                    </button>
+                    <button
+                            type="button"
+                            id="cancelBtn"
+                            class="btn btn-secondary w-100"
+                            onclick="resetForm()"
+                    >
+                        Cancel
+                    </button>
+                </div>
+            </form>
+
+            <!-- Course Table -->
+            <table class="table table-bordered table-hover text-center">
+                <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody id="categoryTable">
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
